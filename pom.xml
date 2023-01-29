@@ -2,12 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.gluonhq.samples</groupId>
-    <artifactId>hellogluon</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <groupId>com.tomeraberbach</groupId>
+    <artifactId>mano-simulator</artifactId>
+    <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>HelloGluon</name>
+    <name>mano-simulator</name>
+
+    <url>https://github.com/TomerAberbach/mano-simulator</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,9 +20,9 @@
         <connect.version>2.0.1</connect.version>
         <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
         <gluonfx.maven.plugin.version>1.0.16</gluonfx.maven.plugin.version>
-        <main.class>com.gluonhq.hello.HelloGluonApp</main.class>
+        <main.class>com.tomeraberbach.mano.application.SuperMain</main.class>
         <app.identifier>${main.class}</app.identifier>
-        <app.description>The HelloGluon app</app.description>
+        <app.description>Mano Simulator</app.description>
         <package.type/>
         <mac.app.store/>
         <mac.signing.user.name/>
@@ -38,6 +40,29 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
+            <classifier>win</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
+            <classifier>linux</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
+            <classifier>mac</classifier>
         </dependency>
         <dependency>
             <groupId>com.gluonhq</groupId>
